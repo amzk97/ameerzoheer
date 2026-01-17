@@ -1176,9 +1176,42 @@ textarea {
 }
 
 @media (max-width: 768px) {
+  /* تحسينات القائمة العلوية */
   .hero-nav {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .nav-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* تحسينات قسم البطل */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+  }
+
+  .hero-kicker {
+    font-size: 0.75rem;
+    white-space: normal;
   }
 
   .hero-actions {
@@ -1188,6 +1221,118 @@ textarea {
 
   .hero-actions button {
     width: 100%;
+  }
+
+  .hero-flair {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* تحسينات الصورة الشخصية */
+  .portrait-glass {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .portrait-ring {
+    display: none;
+  }
+
+  /* تحسينات الأقسام */
+  .panel {
+    padding: 3rem 1.5rem;
+  }
+
+  .panel-header h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  /* تحسينات معرض الأعمال */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .gallery-card {
+    min-height: 180px;
+  }
+
+  /* تحسينات شبكة العملاء */
+  .clients-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* تحسينات الشهادات */
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* تحسينات المهارات */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* تحسينات الخدمات */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* تحسينات نموذج التواصل */
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px;
+  }
+
+  /* تحسينات الفوتر */
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-socials {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* تحسينات نظام إدارة المشتركين */
+  .system-showcase {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .screenshot-image img {
+    height: 250px;
+  }
+
+  /* تحسينات Lightbox */
+  .lightbox-content {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  /* تحسينات الأزرار */
+  .primary-action,
+  .secondary-action {
+    padding: 0.8rem 1.5rem;
+  }
+
+  /* تحسينات الخطوط */
+  body {
+    font-size: 16px;
+  }
+
+  /* تحسينات المسافات */
+  .panel {
+    margin-bottom: 2rem;
   }
 }
 
