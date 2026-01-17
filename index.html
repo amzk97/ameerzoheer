@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENG Ameer Zuhair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script defer src="scripts/main.js"></script>
+</head>
+<body>
+  <div class="geometric-pattern"></div>
+  <div class="floating-circles">
+    <div class="floating-circle"></div>
+    <div class="floating-circle"></div>
+    <div class="floating-circle"></div>
+  </div>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="تبديل الوضع">
+    <i class="fas fa-moon"></i>
+  </button>
+  <div class="app-shell">
+    <header class="hero" id="home">
+      <nav class="hero-nav">
+        <div class="logo">ENG Ameer Zuhair</div>
+        <div class="nav-links">
+          <a href="#about">من أنا</a>
+          <a href="#experience">الخبرات</a>
+          <a href="#stats">إحصائيات</a>
+          <a href="#certifications">شهادات</a>
+          <a href="#gallery">أعمال</a>
+          <a href="#clients">العملاء</a>
+          <a href="#skills">مهارات</a>
+          <a href="#services">خدمات</a>
+          <a href="#contact">تواصل</a>
+        </div>
+        <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+          تواصل معي
+        </button>
+      </nav>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="hero-kicker" dir="ltr">Biomedical Engineer and Technical Programmer</p>
+          <h1>
+            أرحب بك في أفق <span class="highlight">أمير زهير</span>
+          </h1>
+          <p class="hero-subtitle">
+            أجمع بين خبرتي في الهندسة الطبية وشغفي بالبرمجة لأبتكر حلولاً تقنية تخدم القطاع الصحي والاتصالات. بالنسبة لي، البرمجة ليست مجرد مهارة تقنية، بل أداة لتحويل الأفكار إلى واقع رقمي يسهل حياة الناس ويطور الخدمات.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-action" onclick="document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' })">
+              استعراض الأعمال
+            </button>
+            <button class="secondary-action" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+              تواصل مباشر
+            </button>
+          </div>
+          <div class="hero-flair">
+            <span>Micro-interactions</span>
+            <span>Glass gestures</span>
+            <span>Adaptive Bento grid</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="portrait-glass">
+            <img src="photo/photo_2026-01-17_15-17-17.jpg" alt="Portrait" />
+            <div class="portrait-ring ring-one"></div>
+            <div class="portrait-ring ring-two"></div>
+            <div class="portrait-shadow"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel" id="about">
+        <div class="panel-header">
+          <p class="panel-label">سيرتي</p>
+          <h2>من هو المهندس أمير زهير؟</h2>
+        </div>
+        <div class="panel-body">
+          <p>
+            أنا أمير زهير، حاصل على شهادة الهندسة من كلية الحسين ع الجامعة فرع كربلاء، وحملت تسلسلًا من الخبرات التي
+            صقلت مهاراتي وحسّنَتُ رؤيتي. بدأتُ الرحلة مع شركة bbraun الطبية الألمانية، فتعلمت هناك دقة العمليات وسرعة
+            اتخاذ القرار، ثم انتقلت إلى شركة ايرثلنك للاتصالات حيث تعمقت في بناء حلول متقدمة للتواصل عبر الويب.
+          </p>
+          <p>
+            عملت لاحقًا لدى شركة خير الصفوة كمحاسب، فصقلت مهاراتي التحليلية، ما منحني قدرة على ربط الأرقام بالخبرة
+            الهندسية، وكل ذلك يدفعني اليوم لتطوير برامج الويب وصفحات مبتكرة تعتمد على شغفي في البرمجة، لتكون كل واجهة
+            قصة تندمج فيها الفكرة مع التقنية.
+          </p>
+          <p>
+            عام 2025، أنشأت Medusa للحلول البرمجية، لتكون نقطة انطلاق تدمج تطوير البرامج وسطح المكتب والويب، ولتؤكد
+            بها أن بدايتي في عالم البرمجة مدفوعه برؤية واضحة نحو حلول مخصصة للفخامة والابتكار.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel" id="experience">
+        <div class="panel-header">
+          <p class="panel-label">الخبرات</p>
+          <h2>مساري المهني</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+              <h3>مدرس مهني</h3>
+              <h4>وزارة التربية العراقية</h4>
+              <p>أعمل كمدرس مهني في تخصص صيانة الأجهزة الطبية، حيث أقوم بتدريب الطلاب على صيانة وتشغيل الأجهزة الطبية الحديثة ونقل الخبرة العملية.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">2025 - الآن</div>
+            <div class="timeline-content">
+              <h3>مؤسس ومدير تقني</h3>
+              <h4>شركة Medusa للحلول البرمجية</h4>
+              <p>تأسيس شركة متخصصة في تطوير حلول برمجية مبتكرة للقطاع الطبي والاتصالات، مع قيادة فريق من المطورين.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">2024 - 2026</div>
+            <div class="timeline-content">
+              <h3>محاسب تقني</h3>
+              <h4>شركة خير الصفوة</h4>
+              <p>ضمنت الربط بين البيانات المالية والعمليات اليومية، واستثمرت الحس التحليلي في دعم توسّع الشركات والحلول الرقمية.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">2023</div>
+            <div class="timeline-content">
+              <h3>مهندس ميداني</h3>
+              <h4>Earthlink</h4>
+              <p>ساهمت في شبكة FTTH لمبادرة الاتصال الوطني، مع مشاركات ميدانية لحل عقبات المبيعات وإدارة الفريق.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">2022</div>
+            <div class="timeline-content">
+              <h3>مدير ومهندس تقني</h3>
+              <h4>BBraun</h4>
+              <p>إدارة مركز الصيانة للأجهزة الطبية الخاصة بالغسيل الكلوي، مع ضمان التشغيل الآمن والدعم الهندسي.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="stats">
+        <div class="panel-header">
+          <p class="panel-label">إحصائيات</p>
+          <h2>أرقام تعكس إنجازاتي</h2>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label">سنوات الخبرة</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+            <div class="stat-number" data-target="20">0</div>
+            <div class="stat-label">مشروع منجز</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon"><i class="fas fa-users"></i></div>
+            <div class="stat-number" data-target="15">0</div>
+            <div class="stat-label">عميل راضٍ</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+            <div class="stat-number" data-target="8">0</div>
+            <div class="stat-label">شهادة تقدير</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="certifications">
+        <div class="panel-header">
+          <p class="panel-label">الشهادات والتقديرات</p>
+          <h2>إنجازات مهنية وشهادات تقدير</h2>
+        </div>
+        <div class="certifications-grid">
+          <article class="cert-card">
+            <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+            <h3>ورشة تكنولوجيا الطب المدمجة</h3>
+            <p>كلية الحسين الجامعة ومؤسسة زين العابدين الطبية بالتعاون مع مجموعة فنوات كربلاء الفضائية</p>
+            <p class="cert-details">عن أجزاء وطريقة عمل الأجهزة الطبية</p>
+            <span class="cert-date">2020/10/6 - 2020/12/6</span>
+          </article>
+          <article class="cert-card">
+            <div class="cert-icon"><i class="fas fa-award"></i></div>
+            <h3>Basic Technical Training of Dialog+ Machine</h3>
+            <p>شركة BBraun</p>
+            <span class="cert-date">2022</span>
+          </article>
+          <article class="cert-card">
+            <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+            <h3>X-Ray, MRI and Scans</h3>
+            <p>نقابة المهندسين العراقية</p>
+            <span class="cert-date">2024/11/27 - 2024/12/1</span>
+          </article>
+          <article class="cert-card">
+            <div class="cert-icon"><i class="fas fa-star"></i></div>
+            <h3>صالات العمليات الحديثة</h3>
+            <p>نقابة المهندسين فرع المثنى بالتعاون مع منصة أوركس للخدمات الهندسية</p>
+            <p class="cert-details">مدة الدورة: 16 يوم</p>
+            <span class="cert-date">2023/5/5 - 2023/5/20</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="gallery">
+        <div class="panel-header">
+          <p class="panel-label">استعراض الأعمال</p>
+          <h2>محطات الخبرة في مشاريع وطنية وتقنية</h2>
+        </div>
+        <div class="gallery-grid">
+          <article
+            class="gallery-card"
+            data-image="photo/51184455_2131992316879502_4665498260679426048_o-1-768x768-1.jpg"
+          >
+            <div class="gallery-content">
+              <h3>المشروع الوطني للإنترنت</h3>
+              <p>ساهمت في شبكة FTTH لمبادرة الاتصال الوطني، مع مشاركات ميدانية لحل عقبات المبيعات وإدارة الفريق.</p>
+              <div class="project-tags">
+                <span class="tag">FTTH</span>
+                <span class="tag">Network</span>
+                <span class="tag">Team Management</span>
+              </div>
+            </div>
+          </article>
+          <article class="gallery-card" data-image="photo/Praha_Chodov_V_Parku_16_B_Braun.jpg">
+            <div class="gallery-content">
+              <h3>BBraun — مركز الصيانة</h3>
+              <p>مدير و مهندس تقني لصيانة الأجهزة الطبية الخاصة بالغسيل الكلوي، مع ضمان التشغيل الآمن والدعم الهندسي.</p>
+              <div class="project-tags">
+                <span class="tag">Medical Equipment</span>
+                <span class="tag">Dialysis</span>
+                <span class="tag">Technical Support</span>
+              </div>
+            </div>
+          </article>
+          <article
+            class="gallery-card"
+            data-image="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80"
+          >
+            <div class="gallery-content">
+              <h3>خير الصفوة — المحاسبة التقنية</h3>
+              <p>ضمنت الربط بين البيانات المالية والعمليات اليومية، واستثمرت الحس التحليلي في دعم توسّع الشركات والحلول الرقمية.</p>
+              <div class="project-tags">
+                <span class="tag">Accounting</span>
+                <span class="tag">Data Analysis</span>
+                <span class="tag">Digital Solutions</span>
+              </div>
+            </div>
+          </article>
+          <article
+            class="gallery-card"
+            data-image="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80"
+          >
+            <div class="gallery-content">
+              <h3>وزارة التربية العراقية — مدرس مهني</h3>
+              <p>أعمل كمدرس مهني في تخصص صيانة الأجهزة الطبية، حيث أقوم بتدريب الطلاب على صيانة وتشغيل الأجهزة الطبية الحديثة ونقل الخبرة العملية.</p>
+              <div class="project-tags">
+                <span class="tag">Teaching</span>
+                <span class="tag">Medical Equipment</span>
+                <span class="tag">Training</span>
+              </div>
+            </div>
+          </article>
+          <article
+            class="gallery-card"
+            data-image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+          >
+            <div class="gallery-content">
+              <h3>Medusa — الحلول البرمجية</h3>
+              <p>تأسيس شركة Medusa للحلول البرمجية في عام 2025، متخصصة في تطوير تطبيقات الويب وسطح المكتب والأنظمة المخصصة.</p>
+              <div class="project-tags">
+                <span class="tag">Web Development</span>
+                <span class="tag">Desktop Apps</span>
+                <span class="tag">Custom Solutions</span>
+              </div>
+            </div>
+          </article>
+          <article
+            class="gallery-card"
+            data-image="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80"
+          >
+            <div class="gallery-content">
+              <h3>نظام إدارة المستشفيات</h3>
+              <p>تطوير نظام متكامل لإدارة المستشفيات يتضمن إدارة المرضى والمواعيد والسجلات الطبية بطرق آمنة وموثوقة.</p>
+              <div class="project-tags">
+                <span class="tag">Healthcare</span>
+                <span class="tag">Management System</span>
+                <span class="tag">Python</span>
+              </div>
+            </div>
+          </article>
+          <article
+            class="gallery-card"
+            data-image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+          >
+            <div class="gallery-content">
+              <h3>تطبيق تتبع الأجهزة الطبية</h3>
+              <p>إنشاء تطبيق لتتبع وصيانة الأجهزة الطبية، مع نظام تنبيهات ذكي وجدول صيانة آلي.</p>
+              <div class="project-tags">
+                <span class="tag">IoT</span>
+                <span class="tag">Maintenance</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="skills">
+        <div class="panel-header">
+          <p class="panel-label">Expertise</p>
+          <h2>حزمة تقنية متكاملة: برمجة الويب وسطح المكتب بأحدث تقنيات 2026</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div class="skill-icon"><i class="fas fa-user-astronaut"></i></div>
+            <h3>تصميم تجربة المستخدم</h3>
+            <p>أحلل انسيابات المعاملات وأصنع مساحات مريحة تنقل الزائر من معلومات إلى قرار بثقة.</p>
+            <div class="skill-level">
+              <div class="skill-bar" style="width: 90%"></div>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+            <h3>Glassmorphic Layering</h3>
+            <p>أبني طبقات شفافة متدرجة تتوافق مع هوية العلامة وتعزز التركيز على المحتوى الحيوي.</p>
+            <div class="skill-level">
+              <div class="skill-bar" style="width: 85%"></div>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon"><i class="fas fa-magic"></i></div>
+            <h3>Micro-interactions</h3>
+            <p>أبرمج استجابات دقيقة للتمرير والنقر على الويب وسطح المكتب لتعطي كل لحظة لمسًا من الحياة.</p>
+            <div class="skill-level">
+              <div class="skill-bar" style="width: 88%"></div>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon"><i class="fas fa-th-large"></i></div>
+            <h3>Bento Grid Engine</h3>
+            <p>أمهد التخطيطات بحيث توازن بين النصوص والصور والمكونات التفاعلية في كل شاشة.</p>
+            <div class="skill-level">
+              <div class="skill-bar" style="width: 82%"></div>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon"><i class="fab fa-python"></i></div>
+            <h3>Python Programming</h3>
+            <p>تطوير حلول برمجية متقدمة باستخدام Python للويب وسطح المكتب وتحليل البيانات.</p>
+            <div class="skill-level">
+              <div class="skill-bar" style="width: 85%"></div>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon"><i class="fab fa-js"></i></div>
+            <h3>JavaScript Development</h3>
+            <p>بناء تطبيقات ويب تفاعلية باستخدام JavaScript و Frameworks الحديثة.</p>
+            <div class="skill-level">
+              <div class="skill-bar" style="width: 80%"></div>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon"><i class="fas fa-heartbeat"></i></div>
+            <h3>Biomedical Engineering</h3>
+            <p>خبرة في صيانة الأجهزة الطبية وفهم الأنظمة الطبية المتقدمة.</p>
+            <div class="skill-level">
+              <div class="skill-bar" style="width: 92%"></div>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+            <h3>Network Solutions</h3>
+            <p>تصميم وتنفيذ حلول الشبكات المتقدمة والاتصالات.</p>
+            <div class="skill-level">
+              <div class="skill-bar" style="width: 78%"></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="clients">
+        <div class="panel-header">
+          <p class="panel-label">العملاء</p>
+          <h2>شركات وثقت بي</h2>
+        </div>
+        <div class="clients-grid">
+          <article class="client-card">
+            <div class="client-logo"><i class="fas fa-hospital"></i></div>
+            <h3>BBraun</h3>
+            <p>شركة رائدة في الأجهزة الطبية</p>
+          </article>
+          <article class="client-card">
+            <div class="client-logo"><i class="fas fa-network-wired"></i></div>
+            <h3>Earthlink</h3>
+            <p>شركة الاتصالات العراقية</p>
+          </article>
+          <article class="client-card">
+            <div class="client-logo"><i class="fas fa-calculator"></i></div>
+            <h3>خير الصفوة</h3>
+            <p>شركة المحاسبة والتحليل المالي</p>
+          </article>
+          <article class="client-card">
+            <div class="client-logo"><i class="fas fa-school"></i></div>
+            <h3>وزارة التربية</h3>
+            <p>وزارة التربية العراقية</p>
+          </article>
+        </div>
+        <div class="testimonials">
+          <h3>شهادة المدراء</h3>
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <div class="testimonial-content">
+                <i class="fas fa-quote-right"></i>
+                <p>أظهر أمير مستوى عالياً من الاحترافية في صيانة الأجهزة الطبية. كان عمله دقيقاً وموثوقاً دائماً.</p>
+              </div>
+              <div class="testimonial-author">
+                <h4>د. حسن محمود</h4>
+                <span>مدير مركز BBraun</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-content">
+                <i class="fas fa-quote-right"></i>
+                <p>أظهر أمير مهارات عالية في إدارة الفريق وحل المشكلات الميدانية في مشروع FTTH. كان إضافه قيمة للفريق.</p>
+              </div>
+              <div class="testimonial-author">
+                <h4>علي فارس</h4>
+                <span>مدير مشروع Earthlink</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-content">
+                <i class="fas fa-quote-right"></i>
+                <p>قدم أمير حلولاً برمجية مبتكرة ساعدتنا على تحسين كفاءة العمليات المحاسبية بشكل كبير.</p>
+              </div>
+              <div class="testimonial-author">
+                <h4>عمار موسى</h4>
+                <span>مدير شركة خير الصفوة</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="services">
+        <div class="panel-header">
+          <p class="panel-label">الخدمات</p>
+          <h2>حلول برمجية مخصصة لاحتياجاتك</h2>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon"><i class="fas fa-code"></i></div>
+            <h3>تطوير الويب</h3>
+            <p>بناء مواقع ويب حديثة وتطبيقات تفاعلية بأحدث التقنيات</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> تصميم متجاوب</li>
+              <li><i class="fas fa-check"></i> تحسين SEO</li>
+              <li><i class="fas fa-check"></i> دعم فني مستمر</li>
+            </ul>
+            <div class="service-price">من 500$</div>
+          </article>
+          <article class="service-card">
+            <div class="service-icon"><i class="fas fa-desktop"></i></div>
+            <h3>تطبيقات سطح المكتب</h3>
+            <p>تطوير تطبيقات سطح المكتب لأنظمة Windows و Linux</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> أداء عالي</li>
+              <li><i class="fas fa-check"></i> واجهة سهلة</li>
+              <li><i class="fas fa-check"></i> تحديثات دورية</li>
+            </ul>
+            <div class="service-price">من 800$</div>
+          </article>
+          <article class="service-card">
+            <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+            <h3>حلول طبية</h3>
+            <p>تطوير أنظمة متخصصة للقطاع الطبي والمستشفيات</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> أمان عالي</li>
+              <li><i class="fas fa-check"></i> سهولة الاستخدام</li>
+              <li><i class="fas fa-check"></i> دعم على مدار الساعة</li>
+            </ul>
+            <div class="service-price">من 1200$</div>
+          </article>
+          <article class="service-card">
+            <div class="service-icon"><i class="fas fa-database"></i></div>
+            <h3>تحليل البيانات</h3>
+            <p>حلول متقدمة لتحليل البيانات واستخراج الرؤى</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> تقارير تفاعلية</li>
+              <li><i class="fas fa-check"></i> لوحات تحكم</li>
+              <li><i class="fas fa-check"></i> تنبؤات ذكية</li>
+            </ul>
+            <div class="service-price">من 600$</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="subscriber-system">
+        <div class="panel-header">
+          <p class="panel-label">منتجاتنا</p>
+          <h2>نظام إدارة المشتركين</h2>
+        </div>
+        <div class="system-showcase">
+          <div class="system-description">
+            <h3>برنامج متكامل لإدارة خدمات الإنترنت</h3>
+            <p>نظام إدارة المشتركين هو حل برمجي متطور صُمم خصيصاً لخدمة وكلاء الإنترنت، حيث يوفر أدوات متكاملة لإدارة المشتركين، متابعة التفعيلات، وإدارة الحسابات المالية بكفاءة عالية.</p>
+            
+            <div class="system-features">
+              <h4>مميزات النظام:</h4>
+              <ul class="features-list">
+                <li><i class="fas fa-check-circle"></i> واجهة مستخدم سهلة وبديهية</li>
+                <li><i class="fas fa-check-circle"></i> إدارة كاملة للمشتركين والبيانات</li>
+                <li><i class="fas fa-check-circle"></i> متابعة فورية للتفعيلات والخدمات</li>
+                <li><i class="fas fa-check-circle"></i> نظام مالي متكامل للفواتير والمدفوعات</li>
+                <li><i class="fas fa-check-circle"></i> تقارير مفصلة وإحصائيات شاملة</li>
+                <li><i class="fas fa-check-circle"></i> أمان عالي وحماية للبيانات</li>
+                <li><i class="fas fa-check-circle"></i> دعم فني مستمر وتحديثات دورية</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="system-screenshots">
+            <div class="screenshot-card">
+              <div class="screenshot-image">
+                <img src="images/subscriber-login.png" alt="واجهة تسجيل الدخول">
+              </div>
+              <div class="screenshot-caption">
+                <h4>واجهة تسجيل الدخول</h4>
+                <p>تصميم آمن وسهل الاستخدام مع حماية متعددة الطبقات</p>
+              </div>
+            </div>
+            
+            <div class="screenshot-card">
+              <div class="screenshot-image">
+                <img src="images/subscriber-dashboard.png" alt="الواجهة الرئيسية">
+              </div>
+              <div class="screenshot-caption">
+                <h4>الواجهة الرئيسية</h4>
+                <p>لوحة تحكم شاملة تعرض جميع المعلومات الهامة بلمحة واحدة</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="contact">
+        <div class="panel-header">
+          <p class="panel-label">تواصل</p>
+          <h2>دعنا نبني القصة التالية</h2>
+        </div>
+        <form class="contact-form">
+          <label>
+            الاسم
+            <input type="text" placeholder="اسمك الكامل" />
+          </label>
+          <label>
+            البريد الإلكتروني
+            <input type="email" placeholder="mail@example.com" />
+          </label>
+          <label>
+            الفكرة أو المشروع
+            <textarea rows="4" placeholder="شاركني رؤيتك"></textarea>
+          </label>
+          <button type="submit">إرسال الطلب</button>
+        </form>
+        <div class="contact-meta">
+          <p><i class="fas fa-envelope"></i> البريد الإلكتروني الرئيسي: <a href="mailto:ameerzoheer@gmail.com">ameerzoheer@gmail.com</a></p>
+          <p><i class="fas fa-phone"></i> الهاتف/واتساب: <a href="tel:+9647831449569">07831449569</a> · <a href="tel:+9647731590076">07731590076</a></p>
+          <p><i class="fas fa-share-alt"></i> تابعني: <a href="https://www.facebook.com/amir.al.zubaidy.2025" target="_blank" rel="noreferrer"><i class="fab fa-facebook-f"></i> Facebook</a> ·
+            <a href="https://www.instagram.com/am_z_k97" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>جميع الحقوق محفوظة © 2026 | تصميم وتطوير: أمير زهير</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/amir.al.zubaidy.2025" target="_blank" rel="noreferrer"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="https://www.instagram.com/am_z_k97" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="mailto:ameerzoheer@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="إغلاق">×</button>
+      <img src="" alt="عرض مخصص" />
+    </div>
+  </div>
+</body>
+</html>
