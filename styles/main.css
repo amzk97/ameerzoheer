@@ -1545,16 +1545,8 @@ textarea {
   }
   
   .screenshot-image img {
-    height: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .system-showcase {
-    grid-template-columns: 1fr;
-  }
-  
-  .screenshot-image img {
-    height: 300px;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
   }
 }
