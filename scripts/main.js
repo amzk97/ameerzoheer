@@ -76,8 +76,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const galleryCards = document.querySelectorAll('.gallery-card');
   const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox.querySelector('img');
+  const lightboxImg = document.getElementById('lightbox-img');
   const closeButton = document.querySelector('.lightbox-close');
+  const prevButton = document.querySelector('.lightbox-prev');
+  const nextButton = document.querySelector('.lightbox-next');
+  const dotsContainer = document.getElementById('lightbox-dots');
+
+  let currentImages = [];
+  let currentIndex = 0;
+
+  function updateLightboxImage() {
+    lightboxImg.src = currentImages[currentIndex];
+    
+    // Update dots
+    const dots = dotsContainer.querySelectorAll('.lightbox-dot');
+    dots.forEach((dot, index) => {
+      if (index === currentIndex) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+  }
 
   galleryCards.forEach((card) => {
     const image = card.dataset.image;
@@ -86,10 +106,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     card.addEventListener('click', () => {
-      lightboxImg.src = image;
+      const imagesAttr = card.dataset.images;
+      if (imagesAttr) {
+        currentImages = JSON.parse(imagesAttr);
+        currentIndex = 0;
+        lightbox.classList.add('has-multiple');
+        
+        // Generate dots
+        dotsContainer.innerHTML = '';
+        currentImages.forEach((_, idx) => {
+          const dot = document.createElement('div');
+          dot.classList.add('lightbox-dot');
+          if (idx === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => {
+            currentIndex = idx;
+            updateLightboxImage();
+          });
+          dotsContainer.appendChild(dot);
+        });
+      } else {
+        currentImages = [image];
+        currentIndex = 0;
+        lightbox.classList.remove('has-multiple');
+        dotsContainer.innerHTML = '';
+      }
+      
+      updateLightboxImage();
       lightbox.classList.add('visible');
     });
   });
+
+  if (prevButton && nextButton) {
+    prevButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (currentImages.length > 1) {
+        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+        updateLightboxImage();
+      }
+    });
+
+    nextButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (currentImages.length > 1) {
+        currentIndex = (currentIndex + 1) % currentImages.length;
+        updateLightboxImage();
+      }
+    });
+  }
 
   closeButton.addEventListener('click', () => {
     lightbox.classList.remove('visible');

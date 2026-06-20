@@ -15,12 +15,12 @@
 /* الوضع النهاري */
 [data-theme="light"] {
   --shade-900: #ffffff;
-  --shade-800: #f8f8f8;
-  --shade-700: #f0f0f0;
+  --shade-800: #f8f8fa;
+  --shade-700: #f0f0f5;
   --accent-500: #e5940f;
   --accent-400: #d861c0;
-  --accent-300: #5dd9e3;
-  --glass-border: rgba(0, 0, 0, 0.15);
+  --accent-300: #12c2e9;
+  --glass-border: rgba(0, 0, 0, 0.1);
   --text-primary: #1a1a2e;
   --text-muted: rgba(0, 0, 0, 0.7);
 }
@@ -69,8 +69,8 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 20% -10%, rgba(255, 197, 113, 0.25), transparent 45%),
-    radial-gradient(circle at 80% 0%, rgba(8, 255, 213, 0.18), transparent 40%),
+    radial-gradient(circle at 15% 50%, rgba(252, 163, 17, 0.15), transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(110, 244, 255, 0.15), transparent 50%),
     linear-gradient(180deg, var(--shade-900), var(--shade-800));
   color: var(--text-primary);
 }
@@ -223,8 +223,28 @@ textarea {
 
 .logo {
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.2em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.2rem;
+}
+
+.medusa-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(110, 244, 255, 0.5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.logo:hover .medusa-logo {
+  transform: translateY(-3px) scale(1.05);
+  border-color: var(--accent-300);
+  box-shadow: 0 12px 30px rgba(110, 244, 255, 0.3), 0 0 20px rgba(252, 163, 17, 0.2);
 }
 
 .nav-links {
@@ -341,10 +361,17 @@ textarea {
 }
 
 .primary-action {
-  background: var(--accent-500);
+  background: linear-gradient(135deg, var(--accent-500), #ff7e5f);
   color: #05040a;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 10px 20px rgba(252, 163, 17, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primary-action:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(252, 163, 17, 0.5);
 }
 
 .primary-action::before {
@@ -417,13 +444,13 @@ textarea {
   height: 100%;
   object-fit: cover;
   border-radius: 28px;
-  filter: saturate(1.1);
-  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: saturate(1.1) contrast(1.05);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.5s ease;
 }
 
 .portrait-glass:hover img {
-  transform: scale(1.05);
-  filter: saturate(1.2);
+  transform: scale(1.08);
+  filter: saturate(1.3) contrast(1.1);
 }
 
 .portrait-ring {
@@ -504,22 +531,22 @@ textarea {
   border-radius: 24px;
   padding: 1.5rem;
   position: relative;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   cursor: pointer;
   min-height: 220px;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease, border-color 0.5s ease;
   background-size: cover;
   background-position: center;
 }
 
 .gallery-card:hover {
-  transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 20px 40px rgba(5, 4, 10, 0.4);
-  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(8, 255, 213, 0.15), 0 0 20px rgba(110, 244, 255, 0.1);
+  border-color: rgba(110, 244, 255, 0.3);
 }
 
 .gallery-card::before {
@@ -1122,31 +1149,36 @@ textarea {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(5, 4, 10, 0.85);
+  background: rgba(5, 4, 10, 0.95);
   display: none;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
-  z-index: 100;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 
 .lightbox-content {
   max-width: 90vw;
   max-height: 90vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lightbox img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 28px;
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 .lightbox-close {
   position: absolute;
-  top: -1rem;
-  left: -1rem;
+  top: -2rem;
+  right: -2rem;
   background: rgba(255, 255, 255, 0.1);
   border: none;
   color: #fff;
@@ -1155,6 +1187,79 @@ textarea {
   width: 48px;
   height: 48px;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.lightbox-close:hover {
+  background: var(--accent-400);
+  transform: rotate(90deg);
+}
+
+.lightbox-prev, .lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  z-index: 10;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.lightbox-prev:hover, .lightbox-next:hover {
+  background: var(--accent-300);
+  color: var(--shade-900);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-prev { right: -3rem; }
+.lightbox-next { left: -3rem; }
+
+.lightbox.has-multiple .lightbox-prev,
+.lightbox.has-multiple .lightbox-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-dots {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.lightbox-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.lightbox-dot.active {
+  background: var(--accent-300);
+  transform: scale(1.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .lightbox-prev { right: 0.5rem; }
+  .lightbox-next { left: 0.5rem; }
+  .lightbox-close { right: 0; top: -3rem; }
 }
 
 /* تحسين تأثيرات التمرير */
@@ -1336,12 +1441,17 @@ textarea {
   }
 }
 
-/* تنسيقات نظام إدارة المشتركين */
+/* تنسيقات الأنظمة والبرامج */
 .system-showcase {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   padding: 40px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.system-showcase:last-child {
+  border-bottom: none;
 }
 
 .system-description {
@@ -1392,15 +1502,18 @@ textarea {
 }
 
 .screenshot-card {
-  background: var(--shade-700);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease, border-color 0.5s ease;
+  box-shadow: 0 15px 35px rgba(5, 4, 10, 0.4);
 }
 
 .screenshot-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 30px 60px rgba(252, 163, 17, 0.15), 0 0 20px rgba(110, 244, 255, 0.1);
+  border-color: rgba(252, 163, 17, 0.3);
 }
 
 .screenshot-image {
@@ -1441,113 +1554,4 @@ textarea {
   .screenshot-image img {
     height: 300px;
   }
-}
-}
-
-/* تنسيقات نظام إدارة المشتركين */
-.system-showcase {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  padding: 40px 0;
-}
-
-.system-description {
-  padding: 20px;
-}
-
-.system-description h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: var(--accent-500);
-}
-
-.system-description p {
-  color: var(--text-muted);
-  line-height: 1.8;
-  margin-bottom: 30px;
-}
-
-.system-features h4 {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-  color: var(--text-primary);
-}
-
-.features-list {
-  list-style: none;
-  padding: 0;
-}
-
-.features-list li {
-  display: flex;
-  align-items: center;
-  padding: 12px 0;
-  color: var(--text-muted);
-  font-size: 1rem;
-}
-
-.features-list li i {
-  color: var(--accent-500);
-  margin-left: 12px;
-  font-size: 1.2rem;
-}
-
-.system-screenshots {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.screenshot-card {
-  background: var(--shade-700);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.screenshot-card:hover {
-  transform: translateY(-5px);
-}
-
-.screenshot-image {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  background: var(--shade-800);
-}
-
-.screenshot-image img {
-  width: 100%;
-  height: 400px;
-  object-fit: contain;
-  display: block;
-}
-
-.screenshot-caption {
-  padding: 20px;
-}
-
-.screenshot-caption h4 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: var(--text-primary);
-}
-
-.screenshot-caption p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .system-showcase {
-    grid-template-columns: 1fr;
-  }
-  
-  .screenshot-image img {
-    height: 300px;
-  }
-}
 }
