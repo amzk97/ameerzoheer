@@ -1280,7 +1280,7 @@ textarea {
   background: linear-gradient(180deg, var(--accent-500), var(--accent-400));
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   /* تحسينات القائمة العلوية */
   .hero-nav {
     flex-direction: column;
@@ -1408,15 +1408,7 @@ textarea {
     justify-content: center;
   }
 
-  /* تحسينات نظام إدارة المشتركين */
-  .system-showcase {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .screenshot-image img {
-    height: 250px;
-  }
+  /* إزالة الإعدادات السابقة لنظام المشتركين من هنا لضمان ترتيب الكود */
 
   /* تحسينات Lightbox */
   .lightbox-content {
@@ -1544,6 +1536,17 @@ textarea {
   color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .system-showcase {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .screenshot-image img {
+    height: 300px;
+  }
 }
 
 @media (max-width: 768px) {
